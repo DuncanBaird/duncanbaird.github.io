@@ -20,7 +20,7 @@ resume: false
 resume-external: true
 resume-url: https://google.com/?q=my+resume
 
-url: https://duncanbaird.github.io/indigo
+url: https://duncanbaird.github.io/
 # your url: https://USERNAME.github.io
 
 permalink: /:title/
@@ -38,7 +38,7 @@ disqus:
 #twitter: mytwitter
 #instagram: myinstagram
 #linkedin: mylinkedin
-#github: mygithub
+github: https://github.com/DuncanBaird
 #email: myemail@gmail.com
 
 authors:
