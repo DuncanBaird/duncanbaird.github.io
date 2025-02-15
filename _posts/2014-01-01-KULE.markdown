@@ -1,0 +1,16 @@
+---
+title: "KULE Swiss Volunteer"
+layout: post
+date: 2014-01-01 22:10
+tag: project
+image: /assets/images/project3.jpg
+headerImage: true
+projects: true
+hidden: false
+description: "A project about KULE Swiss Volunteer."
+category: project
+author: duncan
+externalLink: https://kulefoundation.com
+---
+
+This is a project about KULE Swiss Volunteer.

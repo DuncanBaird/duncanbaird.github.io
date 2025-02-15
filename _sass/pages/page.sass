@@ -6,7 +6,37 @@
         margin-bottom: 6rem
 
 .about
-    img
-        width: 50%
-        margin: 0 auto
-        display: block
+    display: flex
+    flex-direction: column
+    align-items: center
+    text-align: left
+    max-width: 800px // Adjust the max-width as needed
+    margin: 0 auto
+    padding: 0 20px
+
+    .about-image
+        text-align: center
+        margin-bottom: 20px
+
+        img
+            width: 25%
+            margin: 0 auto
+            display: block
+
+    .about-content
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        width: 100%
+
+        @media (min-width: 768px)
+            flex-direction: row
+
+        .about-text
+            flex: 1
+            padding-left: 200px // Adjust the padding as needed
+
+    .skill-list, ul
+        list-style-position: inside
+        padding-left: 0
+        text-align: left
