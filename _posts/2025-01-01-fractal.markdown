@@ -1,0 +1,87 @@
+---
+title: "Fractal Drawing"
+layout: post
+date: 2025-01-01 22:10
+tag: project
+image: /assets/images/project1.jpg
+headerImage: true
+projects: true
+hidden: false
+description: "A project showcasing fractal drawing."
+category: project
+author: duncan
+externalLink: false
+---
+Welcome to my fractal drawing project! In this post, I will guide you through the fascinating world of fractals and demonstrate how to create your own using the p5.js library. Fractals are intricate and infinitely complex patterns that are self-similar across different scales. They are not only visually stunning but also mathematically intriguing.
+
+To learn more about fractals, you can visit the [Wikipedia page on fractals](https://en.wikipedia.org/wiki/Fractal).
+
+## Understanding the Mathematics Behind Fractals
+
+Fractals are complex geometric shapes that can be split into parts, each of which is a reduced-scale copy of the whole. This property is known as self-similarity. One of the most famous fractals is the Mandelbrot set, which is defined by a simple iterative equation involving complex numbers.
+
+### The Mandelbrot Set
+
+The Mandelbrot set is defined by iterating the function:
+
+\[ f_c(z) = z^2 + c \]
+
+where \( z \) and \( c \) are complex numbers. The iteration starts with \( z = 0 \) and continues until the magnitude of \( z \) exceeds a certain threshold (usually 2) or a maximum number of iterations is reached. The complex number \( c \) is a point in the complex plane, and the Mandelbrot set is the set of all points \( c \) for which the iteration does not diverge.
+
+### Implementing the Mandelbrot Set in p5.js
+
+In our implementation, we use the p5.js library to draw the Mandelbrot set. The `mandelbrot` function iterates the equation and returns the number of iterations it takes for \( z \) to exceed the threshold. The `mandelbrot_set` function generates the fractal by mapping each pixel to a point in the complex plane and applying the `mandelbrot` function.
+
+Here is the JavaScript code used to generate the fractal:
+
+```javascript
+function setup() {
+    let canvas = createCanvas(800, 800);
+    canvas.parent('fractal-canvas');
+    pixelDensity(1);
+}
+
+function draw() {
+    loadPixels();
+    for (let x = 0; x < width; x++) {
+        for (let y = 0; y < height; y++) {
+            let a = map(x, 0, width, -2.5, 2.5);
+            let b = map(y, 0, height, -2.5, 2.5);
+
+            let ca = a;
+            let cb = b;
+
+            let n = 0;
+            let z = 0;
+
+            while (n < 100) {
+                let aa = a * a - b * b;
+                let bb = 2 * a * b;
+                a = aa + ca;
+                b = bb + cb;
+                if (abs(a + b) > 16) {
+                    break;
+                }
+                n++;
+            }
+
+            let bright = map(n, 0, 100, 0, 255);
+            if (n === 100) {
+                bright = 0;
+            }
+
+            let pix = (x + y * width) * 4;
+            pixels[pix + 0] = bright;
+            pixels[pix + 1] = bright;
+            pixels[pix + 2] = bright;
+            pixels[pix + 3] = 255;
+        }
+    }
+    updatePixels();
+    noLoop();
+}
+```
+
+Below, you will find the generated fractal image. Enjoy exploring the beauty of fractals!
+
+<div id="fractal-canvas"></div>
