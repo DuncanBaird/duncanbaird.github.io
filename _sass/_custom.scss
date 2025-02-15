@@ -1,0 +1,24 @@
+// filepath: /c:/Users/dunca/source/repos/duncanbaird.github.io/_sass/_custom.scss
+.page {
+    max-width: 4000px; /* Adjust the max-width as needed */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.page-content {
+    max-width: 4000px; /* Adjust the max-width as needed */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#fractal-canvas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+#fractal-canvas canvas {
+    border: 5px solid; /* Thicker border */
+    border-image: linear-gradient(45deg, #ff6b6b, #f06595, #cc5de8, #845ef7, #5c7cfa, #339af0, #22b8cf, #20c997, #51cf66, #94d82d, #fcc419, #ff922b) 1; /* Gradient border */
+}
