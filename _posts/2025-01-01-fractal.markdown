@@ -3,7 +3,6 @@ title: "Fractal Drawing"
 layout: post
 date: 2025-01-01 22:10
 tag: project
-image: /assets/images/project1.jpg
 headerImage: true
 projects: true
 hidden: false
