@@ -1,0 +1,16 @@
+---
+title: "3D Scanning with Materials"
+layout: post
+date: 2020-12-01 22:10
+tag: project
+image: /assets/images/project1.jpg
+headerImage: true
+projects: true
+hidden: false
+description: "A project about 3D scanning with materials."
+category: project
+author: duncan
+externalLink: https://m-xr.com
+---
+
+This is a project about 3D scanning with materials.
