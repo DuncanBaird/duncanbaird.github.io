@@ -32,6 +32,7 @@ With five years of experience in advanced 3D software, systems, and operations, 
     - Maintained networking with fibre communication for 3 locations for many endpoints
     - Developed cloud deployment on AWS of company tools for massive scale
     - Involved in planning of technical and product road map with C level executives
+    - Collaborated with external partners and stakeholders, for project planning and technology integration
 
 ## Education
 - **Master in Science (Physics) 2:1 2020, University College London**
